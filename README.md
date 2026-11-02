@@ -42,9 +42,37 @@ The project is organized into two main areas:
 
 > **Methodology note:** Not every application is a trained machine-learning model. Allocation, pricing, win-back scenarios, and refund review use rules, statistical screening, or configured assumptions. The forecasting module is the main supervised ML workflow. The Direct-Query Copilot is not a generative LLM.
 
-## Screenshots
+## Application Screenshots
 
-Screenshots from the latest published application version will be added here after capturing the current interface. Older prototype screenshots were intentionally excluded so the README does not misrepresent the current application.
+The following gallery shows the published Cottonil application interface and analytical views.
+
+<table>
+  <tr>
+    <td align="center"><img src="images/Screenshot%202026-11-02%20142641.png" alt="Cottonil application screenshot 1" width="100%"><br><b>Application View 01</b></td>
+    <td align="center"><img src="images/Screenshot%202026-11-02%20142701.png" alt="Cottonil application screenshot 2" width="100%"><br><b>Application View 02</b></td>
+    <td align="center"><img src="images/Screenshot%202026-11-02%20142714.png" alt="Cottonil application screenshot 3" width="100%"><br><b>Application View 03</b></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="images/Screenshot%202026-11-02%20142742.png" alt="Cottonil application screenshot 4" width="100%"><br><b>Application View 04</b></td>
+    <td align="center"><img src="images/Screenshot%202026-11-02%20142756.png" alt="Cottonil application screenshot 5" width="100%"><br><b>Application View 05</b></td>
+    <td align="center"><img src="images/Screenshot%202026-11-02%20142828.png" alt="Cottonil application screenshot 6" width="100%"><br><b>Application View 06</b></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="images/Screenshot%202026-11-02%20142845.png" alt="Cottonil application screenshot 7" width="100%"><br><b>Application View 07</b></td>
+    <td align="center"><img src="images/Screenshot%202026-11-02%20144344.png" alt="Cottonil application screenshot 8" width="100%"><br><b>Application View 08</b></td>
+    <td align="center"><img src="images/Screenshot%202026-11-02%20144448.png" alt="Cottonil application screenshot 9" width="100%"><br><b>Application View 09</b></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="images/Screenshot%202026-11-02%20144513.png" alt="Cottonil application screenshot 10" width="100%"><br><b>Application View 10</b></td>
+    <td align="center"><img src="images/Screenshot%202026-11-02%20144553.png" alt="Cottonil application screenshot 11" width="100%"><br><b>Application View 11</b></td>
+    <td align="center"><img src="images/Screenshot%202026-11-02%20144615.png" alt="Cottonil application screenshot 12" width="100%"><br><b>Application View 12</b></td>
+  </tr>
+  <tr>
+    <td align="center"><img src="images/Screenshot%202026-11-02%20144624.png" alt="Cottonil application screenshot 13" width="100%"><br><b>Application View 13</b></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
 
 ## Data Analysis Notebook
 
@@ -61,7 +89,7 @@ It documents:
 6. Category-level demand forecasting with Random Forest and a seasonal-naive benchmark
 7. Findings, limitations, and alignment with the six applications
 
-The notebook contains no saved cell outputs. It requires the authorized source CSV files to run locally.
+The published notebook includes saved execution outputs to make the analysis easier to review on GitHub. To reproduce or refresh the results, use the authorized source CSV files locally and run the notebook from top to bottom.
 
 ## Technology Stack
 
@@ -81,6 +109,8 @@ Cottonil/
 ├── requirements.txt
 ├── README.md
 ├── .gitignore
+├── images/                 # Application screenshots
+│   └── (13 PNG screenshots)
 └── notebooks/
     └── Cottonil_Data_Analysis_and_AI_Alignment.ipynb
 ```
@@ -144,7 +174,7 @@ streamlit run app.py
 
 ## Project Status
 
-The main Streamlit application, dependency list, privacy rules, setup documentation, and analysis notebook are published. Current-version application screenshots and a final end-to-end run using the authorized local datasets remain to be added/verified.
+The main Streamlit application, dependency list, privacy rules, setup documentation, and analysis notebook are published. The repository includes 13 application screenshots and the executed analysis notebook. A final end-to-end run using the authorized local datasets should still be performed in the target environment.
 
 ---
 
