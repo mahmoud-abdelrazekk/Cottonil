@@ -79,22 +79,9 @@ The screenshots below cover the core analytics views and the decision-support mo
 
 [Browse all 13 screenshots](images/)
 
-## Data Analysis Notebook
+## Project Notebook
 
-The analysis notebook is available here:
-
-[**Cottonil Data Analysis & AI Alignment Notebook**](notebooks/Cottonil_Data_Analysis_and_AI_Alignment.ipynb)
-
-It documents:
-1. Source data inventory and schema / data-dictionary audit
-2. Missing values, duplicates, primary keys, and relationships
-3. Sales, payment, returns, delivery, and supply-chain reconciliation
-4. Data preparation and enterprise exploratory analysis
-5. Customer RFM segmentation
-6. Category-level demand forecasting with Random Forest and a seasonal-naive benchmark
-7. Findings, limitations, and alignment with the six applications
-
-The published notebook includes saved execution outputs to make the analysis easier to review on GitHub. To reproduce or refresh the results, use the authorized source CSV files locally and run the notebook from top to bottom.
+[**Cottonil Analysis Notebook**](notebooks/Cottonil_Data_Analysis_and_AI_Alignment.ipynb)
 
 ## Technology Stack
 
@@ -119,12 +106,6 @@ Cottonil/
 └── notebooks/
     └── Cottonil_Data_Analysis_and_AI_Alignment.ipynb
 ```
-
-## Data Privacy & Setup
-
-The original Cottonil business datasets are **not included** in this public repository. Customer, employee, payroll, transaction, and other confidential records must remain private and must not be committed to GitHub.
-
-You must have authorization to use the source data. The repository's `.gitignore` excludes local business data and common environment files.
 
 ## Run Locally
 
@@ -157,9 +138,9 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 4. Add the authorized data files
+### 4. Configure the application
 
-Place the required CSV files in `COTTONIL_Data/02_TABLES/`, or provide the prepared Parquet tables in the local `processed_data/` directory.
+Make sure the application can access its required local resources before launching.
 
 ### 5. Run the application
 
@@ -167,19 +148,9 @@ Place the required CSV files in `COTTONIL_Data/02_TABLES/`, or provide the prepa
 streamlit run app.py
 ```
 
-## Important Analytical Limitations
-
-- Some sales orders have missing customer identifiers. They remain part of company-level totals but cannot be assigned to an individual RFM customer.
-- The available monthly stock data is at category/location/month grain; it should not be interpreted as live SKU-level stock.
-- A recorded return does not by itself prove that returned goods were received back into sellable inventory.
-- Purchase-order records should not be treated as confirmed received quantities without receiving evidence.
-- Pricing and win-back scenarios use assumptions and are not causal estimates of customer or market response.
-- Statistical refund flags are review signals, not proof of fraud.
-- Forecasts are planning estimates and should be interpreted with their validation results, coverage, and data grain.
-
 ## Project Status
 
-The main Streamlit application, dependency list, privacy rules, setup documentation, and analysis notebook are published. The repository includes 13 application screenshots and the executed analysis notebook. A final end-to-end run using the authorized local datasets should still be performed in the target environment.
+The main Streamlit application, dependency list, project documentation, screenshots, and analysis notebook are published. A final end-to-end run in the target environment should still be performed.
 
 ---
 
