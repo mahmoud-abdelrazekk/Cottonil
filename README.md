@@ -89,26 +89,6 @@ Cottonil/
 
 The original Cottonil business datasets are **not included** in this public repository. Customer, employee, payroll, transaction, and other confidential records must remain private and must not be committed to GitHub.
 
-The application expects the source CSV tables locally under:
-
-```text
-COTTONIL_Data/
-└── 02_TABLES/
-    ├── branches.csv
-    ├── products_catalog.csv
-    ├── sku_variants.csv
-    ├── warehouses.csv
-    ├── suppliers.csv
-    ├── customers.csv
-    ├── sales_orders.csv
-    ├── sales_order_items.csv
-    ├── monthly_stock.csv
-    ├── delivery_shipments.csv
-    └── sales_returns.csv
-```
-
-Some prepared Parquet tables may also be loaded from a local `processed_data/` directory, if available in the application version.
-
 You must have authorization to use the source data. The repository's `.gitignore` excludes local business data and common environment files.
 
 ## Run Locally
