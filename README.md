@@ -30,7 +30,7 @@ The application is organized into two main areas:
 - Streamlit
 - Pandas and NumPy
 - Plotly
-- scikit-learn (used by the forecasting workflow, if enabled in the supplied application version)
+- scikit-learn for Random Forest forecasting
 - PyArrow (optional, for processed Parquet tables)
 
 ## Repository structure
