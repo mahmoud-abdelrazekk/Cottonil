@@ -60,7 +60,7 @@ The screenshots below cover the core analytics views and the decision-support mo
     <td width="50%" valign="top" align="center"><img src="images/Screenshot%202026-11-02%20142828.png" alt="Warehouse-to-Branch Allocation" width="100%"><br><b>Warehouse-to-Branch Allocation</b><br><sub>Allocation workflow and operational inputs for stock rebalancing.</sub></td>
   </tr>
   <tr>
-    <td width="50%" valign="top" align="center"><img src="images/Screenshot%202026-11-02%20142845.png" alt="Allocation Decision Support" width="100%"><br><b>Allocation Decision Support</b><br><sub>Allocation controls and recommendation metrics.</sub></td>
+    <td width="50%" valign="top" align="center"><img src="images/Screenshot%202026-11-02%20142845.png" alt="Allocation Decision Support" width="100%"><br><b>Pricing & Margin Model</b><br><sub>Price and discount scenario controls with estimated margin and profit impact.</sub></td>
     <td width="50%" valign="top" align="center"><img src="images/Screenshot%202026-11-02%20144344.png" alt="Customer Win-Back" width="100%"><br><b>Customer Win-Back</b><br><sub>Customer retention targeting and campaign-oriented outputs.</sub></td>
   </tr>
   <tr>
