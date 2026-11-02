@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.venv/
+venv/
+env/
+ENV/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Local business data (never commit confidential source files)
+COTTONIL_Data/**/*.csv
+COTTONIL_Data/**/*.xlsx
+COTTONIL_Data/**/*.xls
+COTTONIL_Data/**/*.parquet
+processed_data/
+data/
+*.db
+*.sqlite
+*.sqlite3
+
+# Notebook checkpoints and local outputs
+.ipynb_checkpoints/
+*.log
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
