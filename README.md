@@ -44,35 +44,40 @@ The project is organized into two main areas:
 
 ## Application Screenshots
 
-The following gallery shows the published Cottonil application interface and analytical views.
+The screenshots below cover the core analytics views and the decision-support modules. They are arranged in a two-column gallery for better readability.
 
 <table>
   <tr>
-    <td align="center"><img src="images/Screenshot%202026-11-02%20142641.png" alt="Cottonil application screenshot 1" width="100%"><br><b>Application View 01</b></td>
-    <td align="center"><img src="images/Screenshot%202026-11-02%20142701.png" alt="Cottonil application screenshot 2" width="100%"><br><b>Application View 02</b></td>
-    <td align="center"><img src="images/Screenshot%202026-11-02%20142714.png" alt="Cottonil application screenshot 3" width="100%"><br><b>Application View 03</b></td>
+    <td width="50%" valign="top" align="center"><img src="images/Screenshot%202026-11-02%20142641.png" alt="Sales & Profit Analytics" width="100%"><br><b>Sales & Profit Analytics</b><br><sub>Monthly sales trends, category contribution, and top / low-margin products.</sub></td>
+    <td width="50%" valign="top" align="center"><img src="images/Screenshot%202026-11-02%20142701.png" alt="Branch & Regional Performance" width="100%"><br><b>Branch & Regional Performance</b><br><sub>Regional sales distribution and top-performing branches.</sub></td>
   </tr>
   <tr>
-    <td align="center"><img src="images/Screenshot%202026-11-02%20142742.png" alt="Cottonil application screenshot 4" width="100%"><br><b>Application View 04</b></td>
-    <td align="center"><img src="images/Screenshot%202026-11-02%20142756.png" alt="Cottonil application screenshot 5" width="100%"><br><b>Application View 05</b></td>
-    <td align="center"><img src="images/Screenshot%202026-11-02%20142828.png" alt="Cottonil application screenshot 6" width="100%"><br><b>Application View 06</b></td>
+    <td width="50%" valign="top" align="center"><img src="images/Screenshot%202026-11-02%20142714.png" alt="Inventory & Supply Chain" width="100%"><br><b>Inventory & Supply Chain</b><br><sub>Category-level stock position and delivery lead-time indicators.</sub></td>
+    <td width="50%" valign="top" align="center"><img src="images/Screenshot%202026-11-02%20142742.png" alt="Customer Demographics & RFM" width="100%"><br><b>Customer Demographics & RFM</b><br><sub>Customer age bands, cohort behaviour, and RFM segmentation.</sub></td>
   </tr>
   <tr>
-    <td align="center"><img src="images/Screenshot%202026-11-02%20142845.png" alt="Cottonil application screenshot 7" width="100%"><br><b>Application View 07</b></td>
-    <td align="center"><img src="images/Screenshot%202026-11-02%20144344.png" alt="Cottonil application screenshot 8" width="100%"><br><b>Application View 08</b></td>
-    <td align="center"><img src="images/Screenshot%202026-11-02%20144448.png" alt="Cottonil application screenshot 9" width="100%"><br><b>Application View 09</b></td>
+    <td width="50%" valign="top" align="center"><img src="images/Screenshot%202026-11-02%20142756.png" alt="Channels, Payments & Returns" width="100%"><br><b>Channels, Payments & Returns</b><br><sub>Payment mix, channel performance, and return analysis.</sub></td>
+    <td width="50%" valign="top" align="center"><img src="images/Screenshot%202026-11-02%20142828.png" alt="Warehouse-to-Branch Allocation" width="100%"><br><b>Warehouse-to-Branch Allocation</b><br><sub>Allocation workflow and operational inputs for stock rebalancing.</sub></td>
   </tr>
   <tr>
-    <td align="center"><img src="images/Screenshot%202026-11-02%20144513.png" alt="Cottonil application screenshot 10" width="100%"><br><b>Application View 10</b></td>
-    <td align="center"><img src="images/Screenshot%202026-11-02%20144553.png" alt="Cottonil application screenshot 11" width="100%"><br><b>Application View 11</b></td>
-    <td align="center"><img src="images/Screenshot%202026-11-02%20144615.png" alt="Cottonil application screenshot 12" width="100%"><br><b>Application View 12</b></td>
+    <td width="50%" valign="top" align="center"><img src="images/Screenshot%202026-11-02%20142845.png" alt="Allocation Decision Support" width="100%"><br><b>Allocation Decision Support</b><br><sub>Allocation controls and recommendation metrics.</sub></td>
+    <td width="50%" valign="top" align="center"><img src="images/Screenshot%202026-11-02%20144344.png" alt="Customer Win-Back" width="100%"><br><b>Customer Win-Back</b><br><sub>Customer retention targeting and campaign-oriented outputs.</sub></td>
   </tr>
   <tr>
-    <td align="center"><img src="images/Screenshot%202026-11-02%20144624.png" alt="Cottonil application screenshot 13" width="100%"><br><b>Application View 13</b></td>
-    <td></td>
-    <td></td>
+    <td width="50%" valign="top" align="center"><img src="images/Screenshot%202026-11-02%20144448.png" alt="High-Value Refund Review" width="100%"><br><b>High-Value Refund Review</b><br><sub>Statistical review signals and flagged refund records.</sub></td>
+    <td width="50%" valign="top" align="center"><img src="images/Screenshot%202026-11-02%20144513.png" alt="Seasonal Demand Forecasting" width="100%"><br><b>Seasonal Demand Forecasting</b><br><sub>Random Forest demand forecast, planning indicators, and forecast table.</sub></td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top" align="center"><img src="images/Screenshot%202026-11-02%20144553.png" alt="Bilingual Data Copilot" width="100%"><br><b>Bilingual Data Copilot</b><br><sub>Executive Copilot interface and supported question categories.</sub></td>
+    <td width="50%" valign="top" align="center"><img src="images/Screenshot%202026-11-02%20144615.png" alt="Copilot – Suggested Questions" width="100%"><br><b>Copilot – Suggested Questions</b><br><sub>Quick prompts for common operational and commercial questions.</sub></td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top" align="center"><img src="images/Screenshot%202026-11-02%20144624.png" alt="Copilot – Interactive Analysis" width="100%"><br><b>Copilot – Interactive Analysis</b><br><sub>Bilingual question workflow for querying analytical data.</sub></td>
+    <td width="50%"></td>
   </tr>
 </table>
+
+[Browse all 13 screenshots](images/)
 
 ## Data Analysis Notebook
 
