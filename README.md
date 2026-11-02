@@ -1,39 +1,79 @@
+<div align="center">
+
 # Cottonil | Enterprise Analytics & AI Platform
 
-An integrated Streamlit business-intelligence platform for exploring Cottonil's sales, customers, branches, inventory, returns, and supply-chain operations, with a collection of interactive decision-support applications.
+**An integrated business intelligence and decision-support platform for Cottonil**
 
-> **Data & privacy:** The business datasets are not included in this public repository. The application expects the owner to place authorized data files in the local folders described below. Do not commit customer, employee, payroll, transaction, or other confidential company data.
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B?logo=streamlit)](https://streamlit.io/)
+[![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?logo=pandas)](https://pandas.pydata.org/)
+[![Plotly](https://img.shields.io/badge/Plotly-Interactive%20Charts-3F4F75?logo=plotly)](https://plotly.com/python/)
 
-## Platform overview
+[**Repository**](https://github.com/mahmoud-abdelrazekk/Cottonil) · [**Analysis Notebook**](notebooks/Cottonil_Data_Analysis_and_AI_Alignment.ipynb)
 
-The application is organized into two main areas:
+</div>
+
+---
+
+## Project Overview
+
+Cottonil Enterprise Analytics is a Streamlit-based platform designed to turn operational and commercial data into clear business insights. It combines enterprise reporting, exploratory analysis, forecasting, and interactive decision-support applications in one place.
+
+The project is organized into two main areas:
 
 ### 1. Enterprise Analytics
-- Sales and revenue performance
-- Product and category analysis
-- Branch and governorate performance
-- Inventory and supply-chain indicators
+- Sales, revenue, discount, and profitability analysis
+- Product, SKU, and category performance
+- Branch and geographic performance
 - Customer behaviour and RFM segmentation
-- Sales channels, payment methods, and returns
+- Inventory, warehouse, and supply-chain indicators
+- Returns, refunds, delivery, and operational analysis
 
 ### 2. AI Applications & Decision Support
-1. **Warehouse-to-Branch Allocation** — rule-based allocation recommendations and estimated logistics timing.
-2. **Pricing & Margin Model** — interactive what-if pricing and margin simulation using configured category elasticity assumptions.
-3. **Customer Win-Back** — RFM-based customer grouping and campaign scenarios with assumed response rates.
-4. **High-Value Refund Review** — statistical review flags based on refund-value thresholds.
-5. **Seasonal Demand Forecasting** — Random Forest forecasting evaluated with walk-forward validation and compared with a seasonal-naive baseline.
-6. **Keyword Direct-Query Copilot** — keyword-driven questions answered through DataFrame aggregations; this is not a generative LLM.
 
-## Technology stack
+| Application | Purpose | Method |
+|---|---|---|
+| Warehouse-to-Branch Allocation | Suggests allocation and replenishment actions | Business rules and operational assumptions |
+| Pricing & Margin Model | Simulates price, discount, and margin scenarios | What-if calculations using configured assumptions |
+| Customer Win-Back | Segments customers for retention campaigns | RFM segmentation and scenario assumptions |
+| High-Value Refund Review | Highlights unusual refund records for review | Statistical thresholds |
+| Seasonal Demand Forecasting | Estimates future category demand | Random Forest with walk-forward validation and seasonal-naive benchmark |
+| Keyword Direct-Query Copilot | Answers supported questions from analytical data | Keyword/rule-based DataFrame aggregations |
 
-- Python
-- Streamlit
-- Pandas and NumPy
-- Plotly
-- scikit-learn for Random Forest forecasting
-- PyArrow (optional, for processed Parquet tables)
+> **Methodology note:** Not every application is a trained machine-learning model. Allocation, pricing, win-back scenarios, and refund review use rules, statistical screening, or configured assumptions. The forecasting module is the main supervised ML workflow. The Direct-Query Copilot is not a generative LLM.
 
-## Repository structure
+## Screenshots
+
+Screenshots from the latest published application version will be added here after capturing the current interface. Older prototype screenshots were intentionally excluded so the README does not misrepresent the current application.
+
+## Data Analysis Notebook
+
+The analysis notebook is available here:
+
+[**Cottonil Data Analysis & AI Alignment Notebook**](notebooks/Cottonil_Data_Analysis_and_AI_Alignment.ipynb)
+
+It documents:
+1. Source data inventory and schema / data-dictionary audit
+2. Missing values, duplicates, primary keys, and relationships
+3. Sales, payment, returns, delivery, and supply-chain reconciliation
+4. Data preparation and enterprise exploratory analysis
+5. Customer RFM segmentation
+6. Category-level demand forecasting with Random Forest and a seasonal-naive benchmark
+7. Findings, limitations, and alignment with the six applications
+
+The notebook contains no saved cell outputs. It requires the authorized source CSV files to run locally.
+
+## Technology Stack
+
+- **Python**
+- **Streamlit** — interactive application
+- **Pandas / NumPy** — data preparation and analysis
+- **Plotly** — interactive visualizations
+- **Scikit-learn** — Random Forest forecasting
+- **Matplotlib** — notebook visual analysis
+- **PyArrow** — optional Parquet data support
+
+## Repository Structure
 
 ```text
 Cottonil/
@@ -41,86 +81,95 @@ Cottonil/
 ├── requirements.txt
 ├── README.md
 ├── .gitignore
-├── COTTONIL_Data/
-│   └── 02_TABLES/
-│       └── README.md
-└── processed_data/        # Optional local Parquet tables; not committed
+└── notebooks/
+    └── Cottonil_Data_Analysis_and_AI_Alignment.ipynb
 ```
 
-## Data setup
+## Data Privacy & Setup
 
-The app loads data from either:
+The original Cottonil business datasets are **not included** in this public repository. Customer, employee, payroll, transaction, and other confidential records must remain private and must not be committed to GitHub.
 
-- `processed_data/` — optional preprocessed Parquet tables; or
-- `COTTONIL_Data/02_TABLES/` — source CSV tables.
-
-For the CSV fallback, the application expects these files:
+The application expects the source CSV tables locally under:
 
 ```text
-branches.csv
-products_catalog.csv
-sku_variants.csv
-warehouses.csv
-suppliers.csv
-customers.csv
-sales_orders.csv
-sales_order_items.csv
-monthly_stock.csv
-delivery_shipments.csv
-sales_returns.csv
+COTTONIL_Data/
+└── 02_TABLES/
+    ├── branches.csv
+    ├── products_catalog.csv
+    ├── sku_variants.csv
+    ├── warehouses.csv
+    ├── suppliers.csv
+    ├── customers.csv
+    ├── sales_orders.csv
+    ├── sales_order_items.csv
+    ├── monthly_stock.csv
+    ├── delivery_shipments.csv
+    └── sales_returns.csv
 ```
 
-The data must follow the schema and column names expected by the application. The original company data is intentionally excluded. Obtain permission before using or sharing any business dataset.
+Some prepared Parquet tables may also be loaded from a local `processed_data/` directory, if available in the application version.
 
-## Run locally
+You must have authorization to use the source data. The repository's `.gitignore` excludes local business data and common environment files.
 
-1. Clone the repository:
+## Run Locally
 
-   ```bash
-   git clone https://github.com/mahmoud-abdelrazekk/Cottonil.git
-   cd Cottonil
-   ```
+### 1. Clone the repository
 
-2. Create and activate a virtual environment:
+```bash
+git clone https://github.com/mahmoud-abdelrazekk/Cottonil.git
+cd Cottonil
+```
 
-   **Windows**
-   ```powershell
-   python -m venv .venv
-   .venv\Scripts\activate
-   ```
+### 2. Create a virtual environment
 
-   **macOS / Linux**
-   ```bash
-   python3 -m venv .venv
-   source .venv/bin/activate
-   ```
+**Windows (PowerShell)**
 
-3. Install dependencies:
+```powershell
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+```
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+**macOS / Linux**
 
-4. Add your authorized source CSV files to `COTTONIL_Data/02_TABLES/` (or your prepared Parquet files to `processed_data/`).
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
 
-5. Start the application:
+### 3. Install dependencies
 
-   ```bash
-   streamlit run app.py
-   ```
+```bash
+pip install -r requirements.txt
+```
 
-## Methodology notes & limitations
+### 4. Add the authorized data files
 
-Some modules are analytical decision-support tools rather than predictive ML models. Allocation recommendations use configured business rules and logistics assumptions. Pricing simulations use configured elasticity assumptions and should not be interpreted as causal price experiments. Win-back response rates are scenario assumptions, not trained customer-response predictions. Refund review identifies statistical outliers; a flagged refund is not proof of fraud or preventable loss.
+Place the required CSV files in `COTTONIL_Data/02_TABLES/`, or provide the prepared Parquet tables in the local `processed_data/` directory.
 
-The forecasting module uses a Random Forest with walk-forward validation and a seasonal-naive benchmark. Forecasts are planning estimates and should be reviewed alongside operational context and data quality.
+### 5. Run the application
 
-Inventory data is reported at the grain available in the source tables; do not interpret category/location-level stock as live SKU-level inventory.
+```bash
+streamlit run app.py
+```
 
-## Project status
+## Important Analytical Limitations
 
-This repository contains the application and setup documentation. The cleaned analysis notebook, screenshots, and any safe synthetic demonstration data may be added in a later update. No private source datasets are published here.
+- Some sales orders have missing customer identifiers. They remain part of company-level totals but cannot be assigned to an individual RFM customer.
+- The available monthly stock data is at category/location/month grain; it should not be interpreted as live SKU-level stock.
+- A recorded return does not by itself prove that returned goods were received back into sellable inventory.
+- Purchase-order records should not be treated as confirmed received quantities without receiving evidence.
+- Pricing and win-back scenarios use assumptions and are not causal estimates of customer or market response.
+- Statistical refund flags are review signals, not proof of fraud.
+- Forecasts are planning estimates and should be interpreted with their validation results, coverage, and data grain.
 
-## License
+## Project Status
 
-No license has been added yet. All rights remain with the repository owner unless a license is explicitly included.
+The main Streamlit application, dependency list, privacy rules, setup documentation, and analysis notebook are published. Current-version application screenshots and a final end-to-end run using the authorized local datasets remain to be added/verified.
+
+---
+
+<div align="center">
+
+**Cottonil Enterprise Analytics | Built with Python & Streamlit**
+
+</div>
